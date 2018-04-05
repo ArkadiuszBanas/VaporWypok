@@ -1,0 +1,25 @@
+#extend("base")
+
+<!DOCTYPE html>
+
+#export("content") {
+
+    #loop(viewModel.posts, "post") {
+        #embed("single_post")
+    }
+}
+
+#export("page_buttons") {
+
+    #if(viewModel.show_navigation_buttons) {
+        <div class="wblock rbl-block pager"><p>
+        #loop(viewModel.navigation_buttons, "button") {
+            #if(button.is_active) {
+              <a href="#(button.url)" class="button selected">#(button.title)</a>
+            } ##else() {
+              <a href="#(button.url)" class="button">#(button.title)</a>
+            }
+        }
+        </p></div>
+    }
+}

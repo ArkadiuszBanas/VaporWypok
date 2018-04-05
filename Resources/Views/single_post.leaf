@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<li class="entry iC "> <div class="wblock lcontrast dC  " data-id="30986127" data-type="entry">
+<a name="comment-30986127" style="position: relative; top: -120px">&nbsp;</a>
+<a class="profile" title=""><img class="avatar  lazy" src="#(post.user.avatarUrl)" alt=""></a>
+<div>
+  <div class="author ellipsis ">
+    <a class="color-1 showProfileSummary" title=""><b>#(post.user.username)</b></a>
+    <a href="http://www.google.com/"><small class="affect"><time title="2018-03-30 07:20:11" datetime="2018-03-30T07:20:11+02:00" pubdate="">10 godz. temu</time></small></a>
+</div>
+
+<div class="text ">
+  <p>
+#loop(post.text_lines, "line") {
+    #(line)
+    <br>
+}
+  </p>
+
+</div>
+
+<div class="row elements actions">
+  <a href="http://www.google.com/" class="affect btnReply hide" data-login="mescal555"><i class="fa fa-reply"></i> odpowiedz</a>
+  <ul class="responsive-menu">
+    <li><a href="http://www.google.com/" class="affect hide"><i class="fa fa-bars"></i></a></li>
+  </ul>
+</div>

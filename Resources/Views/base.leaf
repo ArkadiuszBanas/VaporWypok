@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mikroblog</title>
+	<link rel="stylesheet" type="text/css" href="/styles/my_styles.css">
+</head>
+<body style="">
+
+<div id="nav" class="clearfix   m-reset-position">
+    <div class="wrapper nav color-bright">
+        <ul class="clearfix mainnav">
+            <li><a href="/"><img src="/images/wypok.png"> </a></li>
+       	</ul>
+
+		<form class="nospace naturalsearch bodyClosable dnone" method="get" id="naturalSearch" action="http://nothing">
+    </form>
+    </div>
+</div>
+
+
+<div id="site" class="m-reset-padding m-reset-margin">
+
+<div class="wrapper clearfix  m-reset-padding">
+
+    <div class="grid m-reset-float">
+        <div class="grid-main m-reset-margin">
+
+			<div id="content">
+<div class="">
+ <div class="rbl-block wblock  mark-bg dC" id="commentFormContainer">
+	 <form class="reply ajax withEmbed" action="/" method="post" id="commentForm" data-submitflag="commentSubmit">
+
+    <a class="profile"><img class="avatar " src="#(viewModel.user.avatarUrl)" alt="avatar"></a>
+    <div class="mfUploadHolder">
+        <fieldset class="arrow_box">
+            <textarea cols="60" rows="2" name="body" tabindex="1" style="height: 57px;" autocomplete="off"></textarea>
+            <input name="text" type="hidden">
+                    </fieldset>
+
+                        <fieldset class="row box surveyRow elements lcontrast dnone">
+                    <div class="row">
+                        Ankieta: <span class="title"></span>
+                        <ul class="responsive-menu">
+                            <li><a href="#" class="affect hide"><i class="fa fa-bars"></i></a></li>
+                            <li><a class="affect removeSurvey" href="#" title=""><i class="fa fa-trash-o"></i> usuń</a></li>
+                        </ul>
+                    </div>
+                    <div class="surveyElems">
+                                            </div>
+                </fieldset>
+
+
+        <fieldset class="row buttons dnone" style="display: block;">
+            <p>
+                <button class="submit dnone" tabindex="2"><i class="fa fa-spinner fa-spin" style="display: none"></i> Wyślij</button>
+            </p>
+        </fieldset>
+			</div>
+    </form>
+</div>
+<div id="newEntriesCounter" class="rbl-block dnone"></div> <ul id="itemsStream" class="comments-stream ">
+
+#import("content")
+
+				</div>
+
+	</div>
+
+
+</div>
+
+</div>
+
+#import("page_buttons")
+
+		</div><!-- /grid-main -->
+
+    </div><!-- /grid -->
+	</div>
+<!-- /wrapper -->
+
+</div>
+
+<div id="footer" class="m-reset-position m-reset-height m-reset-padding">
+</body>
+</html>
