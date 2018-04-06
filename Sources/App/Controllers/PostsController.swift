@@ -20,7 +20,6 @@ struct PostsController {
         drop.get("/", handler: showAllPosts)
         drop.post("/", handler: createPost)
         drop.get("/", Int.parameter, handler: showSpecificPageOfPosts)
-        drop.get("/prepare", handler: prepare)
     }
 
     func showAllPosts(_ req: Request) throws -> ResponseRepresentable {
@@ -50,11 +49,6 @@ struct PostsController {
             try post.save()
         }
 
-        return Response(redirect: "/")
-    }
-
-    func prepare(_ req: Request) throws -> ResponseRepresentable {
-        try FakeContentHelper.generate()
         return Response(redirect: "/")
     }
 }
