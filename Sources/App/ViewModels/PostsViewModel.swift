@@ -70,7 +70,6 @@ extension PostsViewModel: NodeRepresentable {
         try node.set("posts", posts)
         try node.set("navigation_buttons", navigationButtons)
         try node.set("show_navigation_buttons", navigationButtons.count > 0)
-        try node.set("user", UserManager.shared.user())
         return node
     }
 }

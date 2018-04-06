@@ -29,7 +29,7 @@ struct PostsController {
             return Response(redirect: "prepare")
         }
 
-        return try drop.view.make("posts", ["viewModel": viewModel])
+        return try drop.view.make("posts", ["viewModel": viewModel, "base": BaseViewModel()])
     }
 
     func showSpecificPageOfPosts(_ req: Request) throws -> ResponseRepresentable {

@@ -31,7 +31,7 @@
  <div class="rbl-block wblock  mark-bg dC" id="commentFormContainer">
 	 <form class="reply ajax withEmbed" action="/" method="post" id="commentForm" data-submitflag="commentSubmit">
 
-    <a class="profile"><img class="avatar " src="#(viewModel.user.avatarUrl)" alt="avatar"></a>
+    <a class="profile"><img class="avatar " src="#(base.user.avatarUrl)" alt="avatar"></a>
     <div class="mfUploadHolder">
         <fieldset class="arrow_box">
             <textarea cols="60" rows="2" name="body" tabindex="1" style="height: 57px;" autocomplete="off"></textarea>
