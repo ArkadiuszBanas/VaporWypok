@@ -56,7 +56,9 @@ struct PostsViewModel {
     init(pageNumber: Int) throws {
 
         let offset = PostsConstant.pageSize * pageNumber
-        self.posts = try Post.makeQuery().limit(PostsConstant.pageSize, offset: offset).all()
+        self.posts = try Post.makeQuery()
+            .sort("id", .descending)
+            .limit(PostsConstant.pageSize, offset: offset).all()
         self.pageNumber = pageNumber
     }
 }
