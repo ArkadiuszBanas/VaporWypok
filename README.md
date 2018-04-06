@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ArkadiuszBanas/VaporWypok/readme/page_assets/wypok_header.png">
+    <img src="https://raw.githubusercontent.com/ArkadiuszBanas/VaporWypok/master/page_assets/wypok_header.png">
     <br>
     <a href="LICENSE">
         <img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
