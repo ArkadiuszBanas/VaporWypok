@@ -29,11 +29,12 @@ public func configure(
     services.register(middlewares)
 
     var databases = DatabaseConfig()
-    let databaseConfig = PostgreSQLDatabaseConfig(hostname: "localhost",
-                                                  port: 5432,
-                                                  username: "vapor",
-                                                  database: "vapor",
-                                                  password: "password")
+    let databaseConfig = try PostgreSQLDatabaseConfig(url: "postgres://aemevzskzxmzcb:0ee2307b9bd705c6f01f2d29f47ac45a1a89c58755167d8589789674cd78d81f@ec2-54-228-181-43.eu-west-1.compute.amazonaws.com:5432/d603d6rqine9bk")
+//    let databaseConfig = PostgreSQLDatabaseConfig(hostname: "localhost",
+//                                                  port: 5432,
+//                                                  username: "vapor",
+//                                                  database: "vapor",
+//                                                  password: "password")
 
     let database = PostgreSQLDatabase(config: databaseConfig)
     databases.add(database: database, as: .psql)
