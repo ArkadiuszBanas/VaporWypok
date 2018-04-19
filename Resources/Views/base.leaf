@@ -61,7 +61,7 @@
 </div>
 <div id="newEntriesCounter" class="rbl-block dnone"></div> <ul id="itemsStream" class="comments-stream ">
 
-#import("content")
+#get(content)
 
 				</div>
 
@@ -72,7 +72,7 @@
 
 </div>
 
-#import("page_buttons")
+#get(page_buttons)
 
 		</div><!-- /grid-main -->
 

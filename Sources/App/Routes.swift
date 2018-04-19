@@ -1,16 +1,17 @@
+import Routing
 import Vapor
 
-extension Droplet {
+/// Register your application's routes here.
+///
+/// [Learn More →](https://docs.vapor.codes/3.0/getting-started/structure/#routesswift)
+public func routes(_ router: Router) throws {
 
-    public func setupRoutes() throws {
+    let posts = PostsController()
+    posts.addRoutes(to: router)
 
-        let postsController = PostsController(drop: self)
-        postsController.addRoutes(to: self)
+    let apiUsers = ApiUsersController()
+    apiUsers.addRoutes(to: router)
 
-        let apiPostController = ApiPostController()
-        apiPostController.addRoutes(to: self)
-
-        let apiUsersController = ApiUsersController()
-        apiUsersController.addRoutes(to: self)
-    }
+    let apiPosts = ApiPostController()
+    apiPosts.addRoutes(to: router)
 }

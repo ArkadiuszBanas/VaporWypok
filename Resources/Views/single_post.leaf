@@ -11,10 +11,7 @@
 
 <div class="text ">
   <p>
-#loop(post.text_lines, "line") {
-    #(line)
-    <br>
-}
+    #(post.text)
   </p>
 
 </div>

@@ -1,15 +1,13 @@
-#extend("base")
-
 <!DOCTYPE html>
 
-#export("content") {
+#set("content") {
 
-    #loop(viewModel.posts, "post") {
+    #for(post in postContexts) {
         #embed("single_post")
     }
 }
 
-#export("page_buttons") {
+#set("page_buttons") {
 
     #if(viewModel.show_navigation_buttons) {
         <div class="wblock rbl-block pager"><p>
@@ -23,3 +21,5 @@
         </p></div>
     }
 }
+
+#embed("base")

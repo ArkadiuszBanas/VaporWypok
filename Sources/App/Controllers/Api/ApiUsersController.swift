@@ -6,22 +6,15 @@
 //
 
 import Vapor
-import FluentProvider
+import Fluent
 
 struct ApiUsersController {
 
-    func addRoutes(to drop: Droplet) {
-        let usersGroup = drop.grouped("api", "users")
-        usersGroup.get(handler: allUsers)
-        usersGroup.get(User.parameter, handler: getUser)
+    func addRoutes(to router: Router) {
+        router.get("api", "users", use: allUsers)
     }
 
-    func allUsers(_ req: Request) throws -> ResponseRepresentable {
-        let users = try User.all()
-        return try users.makeJSON()
-    }
-
-    func getUser(_ req: Request) throws -> ResponseRepresentable {
-        return try req.parameters.next(User.self)
+    func allUsers(_ req: Request) -> Future<[User]> {
+        return User.query(on: req).all()
     }
 }

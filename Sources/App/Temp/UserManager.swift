@@ -12,11 +12,11 @@ import Foundation
     Will be removed as soon as account creation will be implemented.
 */
 
-class UserManager {
-
-    static let shared = UserManager()
-
-    func user() throws -> User? {
-        return try User.find(1)
-    }
-}
+//class UserManager {
+//
+//    static let shared = UserManager()
+//
+//    func user() throws -> User? {
+//        return try User.find(1, on: )
+//    }
+//}
